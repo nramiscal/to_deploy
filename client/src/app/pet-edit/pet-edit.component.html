@@ -1,0 +1,71 @@
+<div class="new">
+
+
+    <!-- <p>Pet: {{pet | json}}</p>
+    <p>savedPet: {{savedPet | json}}</p>
+    <p>data: {{data | json}}</p>
+    <p>errors: {{errors | json}}</p> -->
+
+    <!-- <div *ngIf="pet">
+        <p>{{pet|json}}</p>
+    </div> -->
+
+    <fieldset>
+        <h2>Update Product</h2>
+        <div class="error" *ngIf="!name.valid">Products must contain a name at least 3 characters long</div><br>
+        <div class="error" *ngIf="!qty.valid">Product must contain a quantity</div><br>
+        <div class="error" *ngIf="!price.valid">Product must contain a price</div><br>
+        <form (submit)="updatePet()">
+            <label for="">Name</label><br>
+            <input type="text" name="name"
+                required
+                minlength="3"
+                [(ngModel)]="pet.name"
+                #name="ngModel"
+                value="{{pet.name}}">
+            <!-- {{ name.errors | json }}
+            {{ name.valid | json }} -->
+            <br>
+
+            <label for="">Qty</label><br>
+            <input type="number"name="qty"
+                required
+                min="0"
+                [(ngModel)]="pet.qty"
+                #qty="ngModel"
+                value="{{pet.qty}}">
+            <!-- {{ qty.errors | json }}
+            {{ qty.valid | json }} -->
+            <br>
+
+            <label for="">Price</label><br>
+            <input type="number"name="price"
+                min="0.01"
+                step="0.01"
+                required
+                min="0"
+                [(ngModel)]="pet.price"
+                #price="ngModel"
+                value="{{pet.price}}"><br><br>
+            <!-- {{ price.errors | json }}
+            {{ price.valid | json }} -->
+
+            <!-- <h4>ABC</h4>
+            <ul>
+                <li><label for="">1: </label>
+                <input type="text"[(ngModel)]="pet.skill1" name="skill1" value="{{pet.skill1}}"></li>
+                <li><label for="">2: </label>
+                <input type="text"[(ngModel)]="pet.skill2" name="skill2" value="{{pet.skill2}}"></li>
+                <li><label for="">3: </label>
+                <input type="text"[(ngModel)]="pet.skill3" name="skill3" value="{{pet.skill3}}"></li>
+            </ul> -->
+
+            <input class="green" *ngIf="name.valid && qty.valid && price.valid" class="button" type="submit" name="" value="UPDATE">
+            <!-- <button class="button" (click)="reset()">RESET</button> -->
+            <a class="button" href="/products/edit/{{pet._id}}">RESET</a>
+            <!-- <a routerLink="/products/edit/{{pet._id}}"><button class="button">reset</button></a> -->
+            <!-- <button class="button" (click)="reset()">RESET</button> -->
+        </form>
+    </fieldset>
+    <br>
+</div>

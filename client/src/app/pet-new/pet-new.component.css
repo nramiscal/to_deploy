@@ -1,0 +1,26 @@
+.button {
+    width: 100px;
+    height: 40px;
+    color: white;
+    font-size: 12px;
+    background-color: #66bafa;
+    border-radius: 10px;
+}
+
+.error {
+    color: purple;
+    display: inline-block;
+}
+
+h3{
+    font-weight: normal;
+}
+
+li {
+    list-style-type: none;
+}
+
+fieldset {
+    width: 980px;
+    border-radius: 10px;
+}

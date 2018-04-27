@@ -1,0 +1,21 @@
+<h2>Product List</h2>
+<nav>
+  <a routerLink="/products/new"><button>Add Product</button></a>
+</nav>
+<br>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Qty</th>
+        <th>Price</th>
+        <th>Actions</th>
+    </tr>
+    <tr *ngFor="let pet of pets">
+        <td>{{pet._id}}</td>
+        <td>{{pet.name}}</td>
+        <td>{{pet.qty}}</td>
+        <td>{{pet.price | currency: 'USD':true:'1.2-2'}}</td>
+        <td> <a routerLink="/products/{{pet._id}}">Details</a> | <a routerLink="/products/edit/{{pet._id}}">Edit</a></td>
+    </tr>
+</table>

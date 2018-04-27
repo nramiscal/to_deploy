@@ -1,0 +1,52 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 1010px;
+}
+
+td, th {
+    border: 1px solid lavender;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: lavender;
+}
+
+div {
+    width: 1000px;
+    padding: 15px;
+}
+
+.body {
+    height: auto;
+}
+
+.button {
+    width: 100px;
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+h2 {
+    font-weight: normal;
+}
+
+a button {
+    font-size: 16px;
+}
+
+li {
+    list-style-type: none;
+}
+
+button {
+    width: 200px;
+    height: 40px;
+    color: white;
+    font-size: 12px;
+    background-color: purple;
+    border-radius: 10px;
+}

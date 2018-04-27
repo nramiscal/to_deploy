@@ -1,0 +1,44 @@
+* {
+    /* outline: 1px solid black; */
+}
+
+.button {
+    width: 100px;
+    height: 40px;
+    color: white;
+    font-size: 12px;
+    background-color: #66bafa;
+    border-radius: 10px;
+}
+
+.purple {
+    color: purple;
+}
+
+li {
+    list-style-type: none;
+}
+
+.grey {
+    background-color: silver;
+}
+
+.green {
+    background-color: #98ff98;
+}
+
+.error {
+    color: purple;
+    display: inline-block;
+}
+
+fieldset {
+    width: 980px;
+    border-radius: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    padding: 12px 25px;
+}

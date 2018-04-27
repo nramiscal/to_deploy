@@ -1,0 +1,22 @@
+<h1 *ngIf="adopted">Product successfully deleted</h1>
+<h2>Product Details</h2>
+<p *ngIf="pet == null">Sorry, could not find product. Please try again.</p>
+<p class="error" *ngIf="pet['qty']>0">To delete a product, the quantity must be 0</p>
+
+<p *ngIf="pet['name']"><span>Name: </span>{{pet["name"]}}</p>
+<p *ngIf="pet['qty']"><span>Qty: </span>{{pet["qty"]}}</p>
+<p *ngIf="pet['price']"><span>Price: </span>{{pet["price"]|currency}}</p>
+<!-- <p *ngIf="pet['skill1']"><span>Skills: </span>
+    <p class="tab" *ngIf="pet['skill1']">{{pet["skill1"]}}</p>
+    <p class="tab" *ngIf="pet['skill2']">{{pet["skill2"]}}</p>
+    <p class="tab" *ngIf="pet['skill3']">{{pet["skill3"]}}</p> -->
+
+<!-- <p *ngIf="pet['likes']>=0"><span>Likes: </span>{{pet["likes"]}}</p> -->
+
+<!-- {{pet|json}} -->
+
+<button class="button red" *ngIf="pet['qty']==0" (click)="adoptPet()">DELETE</button>
+<button class="button grey" *ngIf="pet['qty']>0">DELETE</button>
+<!-- <button class="button" (click)="adoptPet()">Remove from Database</button> -->
+<a routerLink="/products"><button class="button">BACK</button></a>
+<!-- <p>{{liked|json}}</p> -->
